@@ -1,11 +1,18 @@
 import React from 'react';
 import Link from 'next/link';
+import { useMediaQuery } from 'usehooks-ts';
 
 import { Icons } from '../icons';
 import { Button, buttonVariants } from '../ui/button';
 import { Dropdown } from '../ui/dropdown';
 import { MenuItem } from '.';
 
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion';
 import { cn } from '@/lib/utils';
 
 export const SidebarItem = ({
@@ -17,34 +24,10 @@ export const SidebarItem = ({
   collapsed: boolean;
   item: MenuItem;
 }) => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const matches = useMediaQuery('(max-width: 1024px)');
   return item.children ? (
-    <li className="hs-accordion" id="users-accordion">
-      {!collapsed && (
-        <Button
-          variant="ghost"
-          type="button"
-          className={cn(
-            'hs-accordion-toggle hs-accordion-active:hover:bg-transparent dark:hs-accordion-active:text-white flex w-full items-center gap-x-3.5 rounded-lg px-2.5 py-2 text-start text-sm text-slate-700 hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:bg-gray-900 dark:hover:text-slate-300 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600',
-            {
-              'hs-accordion-active:text-blue-600': !collapsed,
-            }
-          )}
-        >
-          {item.icon && <item.icon />}
-          <span
-            className={cn('opacity-100 transition-all ', {
-              hidden: collapsed,
-              'opacity-0': collapsed,
-            })}
-          >
-            {item.label}
-          </span>
-
-          {!collapsed && (
-            <Icons.chevronUp className="hs-accordion-active:-rotate-180 ms-auto size-4 text-gray-600 transition-all group-hover:text-gray-500 dark:text-gray-400 " />
-          )}
-        </Button>
-      )}
+    <div>
       {collapsed && (
         <Dropdown items={item.children}>
           <Button type="button" variant="ghost" size="icon">
@@ -53,30 +36,51 @@ export const SidebarItem = ({
         </Dropdown>
       )}
 
-      <div
-        id="users-accordion"
-        className={cn(
-          'hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300',
-          {
-            '!hidden': collapsed,
-          }
-        )}
+      <Accordion
+        className={cn({
+          hidden: collapsed,
+        })}
+        type="single"
+        collapsible
       >
-        <ul
-          className="hs-accordion-group ps-3 pt-2"
-          data-hs-accordion-always-open
-        >
-          {item.children.map((child) => (
-            <SidebarItem
-              collapsed={collapsed}
-              pathname={pathname}
-              key={child.label}
-              item={child}
-            />
-          ))}
-        </ul>
-      </div>
-    </li>
+        <AccordionItem className="border-none" value={item.label}>
+          <AccordionTrigger asChild>
+            <Button
+              variant="ghost"
+              type="button"
+              className={cn(
+                'flex w-full items-center justify-start gap-x-3.5 rounded-lg px-2.5  text-start text-sm text-slate-700',
+                pathname === item.path ? 'bg-gray-100 dark:bg-gray-800' : ''
+              )}
+            >
+              {item.icon && <item.icon />}
+              <span
+                className={cn('opacity-100 transition-all ', {
+                  hidden: collapsed,
+                  'opacity-0': collapsed,
+                })}
+              >
+                {item.label}
+              </span>
+              <Icons.chevronDown className="ml-auto size-4 shrink-0 transition-transform duration-200" />
+            </Button>
+          </AccordionTrigger>
+
+          <AccordionContent className="ml-4 pb-0">
+            <ul className="ps-3 pt-2">
+              {item.children.map((child) => (
+                <SidebarItem
+                  collapsed={collapsed}
+                  pathname={pathname}
+                  key={child.label}
+                  item={child}
+                />
+              ))}
+            </ul>
+          </AccordionContent>
+        </AccordionItem>
+      </Accordion>
+    </div>
   ) : (
     <li>
       <Link
@@ -85,7 +89,7 @@ export const SidebarItem = ({
             variant: 'ghost',
             size: collapsed ? 'icon' : 'default',
           }),
-          'flex w-full items-center gap-x-3.5 rounded-lg px-2.5 py-2 text-start text-sm text-slate-700',
+          'flex w-full items-center gap-x-3.5 rounded-lg px-2.5 text-start text-sm text-slate-700',
           !collapsed && '!justify-start',
           pathname === item.path ? 'bg-gray-100 dark:bg-gray-800' : ''
         )}

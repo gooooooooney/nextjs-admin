@@ -6,7 +6,7 @@ import { usePathname } from 'next/navigation';
 
 import { Icons } from '../icons';
 import { Button } from '../ui/button';
-import { SidebarItem } from './sidebar-item';
+import { SidebarMenu } from './sidebar-menu';
 
 import { cn } from '@/lib/utils';
 
@@ -17,7 +17,7 @@ export type MenuItem = {
   children?: MenuItem[];
 };
 
-type SidebarProps = {
+export type SidebarProps = {
   items: MenuItem[];
 };
 
@@ -74,6 +74,7 @@ export const routes: MenuItem[] = [
           {
             path: '/reservations/management/active',
             label: 'activeReservations',
+            icon: Icons.barChartBig,
           },
           {
             path: '/reservations/management/past',
@@ -124,21 +125,7 @@ export const Sidebar = ({ items }: SidebarProps) => {
           Brand
         </Link>
       </div>
-      <nav
-        className="hs-accordion-group flex w-full flex-col flex-wrap p-6"
-        data-hs-accordion-always-open
-      >
-        <ul className="space-y-1.5">
-          {items.map((item) => (
-            <SidebarItem
-              collapsed={collapsed}
-              pathname={pathname}
-              key={item.label}
-              item={item}
-            />
-          ))}
-        </ul>
-      </nav>
+      <SidebarMenu {...{ pathname, items, collapsed, setCollapsed }} />
       <Button
         variant="ghost"
         size="icon"

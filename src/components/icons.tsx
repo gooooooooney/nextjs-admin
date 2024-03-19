@@ -1,8 +1,8 @@
 import {
   BarChartBig,
   BookOpenText,
+  ChevronDown,
   ChevronLeft,
-  ChevronUp,
   ClipboardList,
   Home,
   Lamp,
@@ -49,8 +49,8 @@ export const Icons = {
   libraryBig: ({ className, ...props }: LucideProps) => (
     <LibraryBig {...props} className={cn('size-4', className)} />
   ),
-  chevronUp: ({ className, ...props }: LucideProps) => (
-    <ChevronUp {...props} className={cn('size-4', className)} />
+  chevronDown: ({ className, ...props }: LucideProps) => (
+    <ChevronDown {...props} className={cn('size-4', className)} />
   ),
   chevronLeft: ({ className, ...props }: LucideProps) => (
     <ChevronLeft {...props} className={cn('size-4', className)} />
