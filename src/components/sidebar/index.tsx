@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 import { Icons } from '../icons';
+import { Button } from '../ui/button';
 import { SidebarItem } from './sidebar-item';
 
 import { cn } from '@/lib/utils';
@@ -69,6 +70,16 @@ export const routes: MenuItem[] = [
       {
         path: '/reservations/management',
         label: 'reservationHistory',
+        children: [
+          {
+            path: '/reservations/management/active',
+            label: 'activeReservations',
+          },
+          {
+            path: '/reservations/management/past',
+            label: 'pastReservations',
+          },
+        ],
       },
     ],
   },
@@ -97,13 +108,10 @@ export const Sidebar = ({ items }: SidebarProps) => {
     <div
       id="docs-sidebar"
       className={cn(
-        [
-          'hs-overlay hs-overlay-open:translate-x-0 fixed inset-y-0 start-0 z-[60] hidden w-64 -translate-x-full overflow-y-auto border-e border-gray-200 bg-white pb-10 pt-7 transition-all duration-300 ',
-          'lg:bottom-0 lg:end-auto lg:block lg:translate-x-0 dark:border-gray-700 dark:bg-gray-800 ',
-          '[&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-gray-300 dark:[&::-webkit-scrollbar-thumb]:bg-slate-500 [&::-webkit-scrollbar-track]:bg-gray-100 dark:[&::-webkit-scrollbar-track]:bg-slate-700 [&::-webkit-scrollbar]:w-2',
-        ],
+        'hidden border-e  border-gray-200 bg-white  pb-10 pt-7 transition-all lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-72 lg:flex-col dark:border-gray-700 dark:bg-gray-800',
+
         {
-          'w-20': collapsed,
+          'lg:w-20': collapsed,
         }
       )}
     >
@@ -115,15 +123,6 @@ export const Sidebar = ({ items }: SidebarProps) => {
         >
           Brand
         </Link>
-        <button
-          type="button"
-          className="mt-3.5 flex items-center gap-x-2 text-gray-600 dark:text-gray-400"
-          onClick={() => setCollapsed(!collapsed)}
-        >
-          <span className="text-xs font-semibold">
-            {collapsed ? 'Expand' : 'Collapse'}
-          </span>
-        </button>
       </div>
       <nav
         className="hs-accordion-group flex w-full flex-col flex-wrap p-6"
@@ -140,6 +139,18 @@ export const Sidebar = ({ items }: SidebarProps) => {
           ))}
         </ul>
       </nav>
+      <Button
+        variant="ghost"
+        size="icon"
+        onClick={() => setCollapsed(!collapsed)}
+        className="bg-background absolute -right-3 top-5 z-[61] size-6 rounded-full shadow-lg"
+      >
+        <Icons.chevronLeft
+          className={cn('size-4 transition-transform', {
+            'rotate-180': collapsed,
+          })}
+        />
+      </Button>
     </div>
   );
 };
