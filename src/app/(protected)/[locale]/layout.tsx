@@ -2,6 +2,7 @@ import '@/styles/globals.css';
 
 import { PropsWithChildren } from 'react';
 import type { Metadata } from 'next';
+import NextTopLoader from 'nextjs-toploader';
 
 import { ThemeProvider } from '@/components/theme-provider';
 import { Toaster } from '@/components/ui/toaster';
@@ -51,6 +52,7 @@ const RootLayout = ({
     <html lang={locale} suppressHydrationWarning>
       <body className={cn('min-h-screen font-sans', fonts)}>
         <ThemeProvider attribute="class">
+          <NextTopLoader />
           {children}
           <Toaster />
         </ThemeProvider>

@@ -1,8 +1,6 @@
 'use client';
 
 import Image from 'next/image';
-import { Session } from 'next-auth';
-import { signOut } from 'next-auth/react';
 
 import { Icons } from '@/components/icons';
 import {
@@ -11,8 +9,16 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
+type UserDropdownProps = {
+  session: {
+    user: {
+      name: string;
+      image: string;
+    };
+  };
+};
 
-export const UserDropdown = ({ session }: { session: Session }) => {
+export const UserDropdown = ({ session }: UserDropdownProps) => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger>
@@ -25,7 +31,7 @@ export const UserDropdown = ({ session }: { session: Session }) => {
         />
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        <DropdownMenuItem onClick={() => signOut()}>
+        <DropdownMenuItem>
           <Icons.logOut className="mr-2 size-4" /> <span>Log out</span>
         </DropdownMenuItem>
       </DropdownMenuContent>
