@@ -11,7 +11,7 @@ export function MobileSidebar({ children }: { children: React.ReactNode }) {
   return (
     <Sheet>
       <SheetTrigger asChild>{children}</SheetTrigger>
-      <SheetContent side="left">
+      <SheetContent className="w-2/3 pl-0" side="left">
         <SidebarMenu pathname={pathname} collapsed={false} items={routes} />
       </SheetContent>
     </Sheet>

@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation';
 
 import { Icons } from '../icons';
 import { Button } from '../ui/button';
+import { SidebarHeader } from './sidebar-header';
 import { SidebarMenu } from './sidebar-menu';
 
 import { cn } from '@/lib/utils';
@@ -109,8 +110,7 @@ export const Sidebar = ({ items }: SidebarProps) => {
     <div
       id="docs-sidebar"
       className={cn(
-        'hidden border-e  border-gray-200 bg-white  pb-10 pt-7 transition-all lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-72 lg:flex-col dark:border-gray-700 dark:bg-gray-800',
-
+        'bg-background hidden border-e  pb-10 pt-4 transition-all lg:relative lg:inset-y-0 lg:z-50 lg:flex lg:w-72 lg:flex-col ',
         {
           'lg:w-20': collapsed,
         }
@@ -118,11 +118,11 @@ export const Sidebar = ({ items }: SidebarProps) => {
     >
       <div className="px-6">
         <Link
-          className="flex-none text-xl font-semibold dark:text-white"
+          className="flex-none text-xl font-semibold"
           href="#"
           aria-label="Brand"
         >
-          Brand
+          <SidebarHeader collapsed={collapsed} />
         </Link>
       </div>
       <SidebarMenu {...{ pathname, items, collapsed, setCollapsed }} />

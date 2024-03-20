@@ -9,6 +9,7 @@ import {
   LibraryBig,
   LogOut,
   LucideProps,
+  Menu,
   Moon,
   PhoneCall,
   Sun,
@@ -54,5 +55,8 @@ export const Icons = {
   ),
   chevronLeft: ({ className, ...props }: LucideProps) => (
     <ChevronLeft {...props} className={cn('size-4', className)} />
+  ),
+  hamburgerMenu: ({ className, ...props }: LucideProps) => (
+    <Menu {...props} className={cn('size-4', className)} />
   ),
 };

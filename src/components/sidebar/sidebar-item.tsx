@@ -49,11 +49,10 @@ export const SidebarItem = ({
               variant="ghost"
               type="button"
               className={cn(
-                'flex w-full items-center justify-start gap-x-3.5 rounded-lg px-2.5  text-start text-sm text-slate-700',
-                pathname === item.path ? 'bg-gray-100 dark:bg-gray-800' : ''
+                'flex w-full items-center justify-start gap-x-3.5 rounded-lg px-2.5  text-start text-sm '
               )}
             >
-              {item.icon && <item.icon />}
+              {item.icon && <item.icon className="!rotate-0" />}
               <span
                 className={cn('opacity-100 transition-all ', {
                   hidden: collapsed,
@@ -89,9 +88,9 @@ export const SidebarItem = ({
             variant: 'ghost',
             size: collapsed ? 'icon' : 'default',
           }),
-          'flex w-full items-center gap-x-3.5 rounded-lg px-2.5 text-start text-sm text-slate-700',
+          'flex w-full items-center gap-x-3.5 rounded-lg px-2.5 text-start text-sm ',
           !collapsed && '!justify-start',
-          pathname === item.path ? 'bg-gray-100 dark:bg-gray-800' : ''
+          pathname === item.path ? 'bg-accent' : ''
         )}
         href={item.path || '/'}
       >

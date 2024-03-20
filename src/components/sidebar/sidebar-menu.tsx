@@ -16,7 +16,7 @@ export const SidebarMenu = ({
 }: SidebarMenuProps) => {
   return (
     <nav
-      className="hs-accordion-group flex w-full flex-col flex-wrap p-6"
+      className="hs-accordion-group flex w-full flex-col flex-wrap p-6 pt-4"
       data-hs-accordion-always-open
     >
       <ul className="space-y-1.5">

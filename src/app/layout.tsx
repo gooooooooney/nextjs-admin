@@ -5,7 +5,6 @@ import type { Metadata } from 'next';
 
 import { Footer } from '@/components/footer';
 import { Navbar } from '@/components/navbar/navbar';
-import PrelineScript from '@/components/preline-script';
 import { routes, Sidebar } from '@/components/sidebar';
 import { ThemeProvider } from '@/components/theme-provider';
 import { Toaster } from '@/components/ui/toaster';
@@ -50,13 +49,17 @@ export const metadata: Metadata = {
 const RootLayout = ({ children }: PropsWithChildren) => {
   return (
     <html lang="en" suppressHydrationWarning>
-      <PrelineScript />
       <body className={cn('min-h-screen font-sans', fonts)}>
         <ThemeProvider attribute="class">
-          <Navbar />
-          <Sidebar items={routes} />
-          {children}
-          <Footer />
+          <div className="flex min-h-screen">
+            <Sidebar items={routes} />
+            <main className="flex grow flex-col">
+              <Navbar />
+              {children}
+              <Footer />
+            </main>
+          </div>
+
           <Toaster />
         </ThemeProvider>
       </body>
