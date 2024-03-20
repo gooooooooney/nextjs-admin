@@ -1,0 +1,298 @@
+{
+  "signup": {
+    "label": "Registrarse",
+    "description": "Registrarse en Dineasy es rápido y gratuito.",
+    "fields": {
+      "restaurant": {
+        "label": "Nombre del restaurante",
+        "placeholder": "Ingrese el nombre del restaurante."
+      },
+      "address": {
+        "label": "Dirección",
+        "placeholder": "Ingrese la dirección del restaurante"
+      },
+      "first_name": {
+        "label": "Primer Nombre",
+        "placeholder": "Ingrese su primer nombre"
+      },
+      "last_name": {
+        "label": "Apellido",
+        "placeholder": "Ingrese su apellido"
+      },
+      "phone": {
+        "label": "Número de teléfono",
+        "placeholder": "Ingrese a número de teléfono",
+        "validate": {
+          "phone_incorrect": "¡El número de teléfono es incorrecto!",
+          "country_code_required": "¡El código de país es obligatorio!"
+        }
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "Ingrese su email"
+      },
+      "verification_code": {
+        "label": "Código de verificación",
+        "placeholder": "Ingrese el código de verificación",
+        "send": "Enviar código",
+        "send_again": "Reenviar código",
+        "send_again_in": "Reenviar en {{time}}s",
+        "send_success": "¡Código enviado con éxito!",
+        "validate": {
+          "code_incorrect": "¡El código de verificación es incorrecto!",
+          "code_expired": "¡El código de verificación ha expirado!",
+          "code_required": "¡El código de verificación es requerido!",
+          "email_required": "¡El email es requerido!"
+        }
+      },
+      "password": {
+        "label": "Contraseña",
+        "placeholder": "Crear una contraseña",
+        "validate": {
+          "password_not_strong": "¡La contraseña debe contener al menos una letra mayúscula, una letra minúscula, un número y un carácter especial!"
+        }
+      },
+      "confirm_password": {
+        "label": "Confirmar contraseña",
+        "placeholder": "Vuelve a ingresar la contraseña",
+        "validate": {
+          "password_not_match": "Las contraseñas no coinciden. Por favor, inténtalo de nuevo."
+        }
+      }
+    },
+    "continue": "Continuar",
+    "prev": "Anterior",
+    "already_have_account": "¿Ya tienes una cuenta?",
+    "tips": {
+      "success": "¡Registro exitoso! Ahora puedes iniciar sesión con tu cuenta.",
+      "failure": "Error en el registro. Por favor, verifica la información e inténtalo de nuevo."
+    }
+  },
+  "login": {
+    "label": "Iniciar sesión",
+    "description": "¿Nuevo en Dineasy?",
+    "fields": {
+      "email": {
+        "label": "Email",
+        "placeholder": "Ingrese su email"
+      },
+      "password": {
+        "label": "Contraseña",
+        "placeholder": "Ingresa tu contraseña"
+      }
+    },
+    "tips": {
+      "failure": "Inicio de sesión fallido. Verifica tu nombre de usuario y contraseña e inténtalo de nuevo."
+    }
+  },
+  "logout": {
+    "label": "Cerrar sesión"
+  },
+  "Dashboard": {
+    "menus": {
+      "home": "Inicio",
+      "settings": "Configuración",
+      "reporting": "Informes y Análisis",
+      "menu": "Menú",
+      "orders": "Pedidos",
+      "orderManagement": "Historial de pedidos",
+      "misc": "Misceláneo",
+      "reservations": "Reservas",
+      "reservationHistory": "Historial de reservas"
+    },
+    "terminologies": {
+      "category": "Categoría",
+      "categories": "Categorías",
+      "item": "Producto",
+      "items": "Productos",
+      "combo": "Combo",
+      "combos": "Combos",
+      "order": "Pedido",
+      "orders": "Pedidos",
+      "diningTable": "Mesa",
+      "diningTables": "Mesas",
+      "customer": "Cliente",
+      "customers": "Clientes",
+      "reservation": "Reserva",
+      "reservations": "Reservas",
+      "modifier": "Modificador",
+      "modifiers": "Modificadores",
+      "modifierOption": "Opción del Modificador",
+      "modifierOptions": "Opciones de modificador",
+      "modifierGroup": "Grupo de Modificadores",
+      "modifierGroups": "Grupos de modificadores",
+      "priceAdjustment": "Ajuste de precio"
+    }
+  },
+  "feedback": {
+    "pageNotFound": "Página no encontrada",
+    "backToHome": "Volver a Inicio",
+    "badRequest": "Solicitud incorrecta",
+    "serverError": "Error del servidor",
+    "operationSucceeded": "Operación completada exitosamente.",
+    "operationFailed": "Error al completar la operación. Por favor, inténtalo de nuevo.",
+    "{{label}}AlreadyExists": "{{label}} ya existe.",
+    "imageTooLarge": "¡La imagen que intentaste subir es demasiado grande!",
+    "imagePixelsTooLarge": "La imagen es demasiado grande. Por favor, utiliza una más pequeña.",
+    "imagePixelsTooSmall": "La imagen es demasiado pequeña. Por favor, utiliza una más grande.",
+    "noMore": "No hay más",
+    "newVersionAvailable": "¡Nueva versión disponible! Actualiza ahora para obtener las últimas características y mejoras.",
+    "new{{version}}Available": "¡Nueva versión {{version}} disponible! Actualiza ahora para obtener las últimas características y mejoras.",
+    "updateNow": "Actualizar ahora"
+  },
+  "actions": {
+    "actions": "Acciones",
+    "add": "Agregar",
+    "back": "Atrás",
+    "create": "Crear",
+    "edit": "Editar",
+    "delete": "Eliminar",
+    "update": "Actualizar",
+    "clear": "Vaciar",
+    "print": "Imprimir",
+    "continue": "Continuar",
+    "next": "Siguiente",
+    "prev": "Anterior",
+    "refresh": "Actualizar",
+    "cancel": "Cancelar",
+    "close": "Cerrar",
+    "retry": "Reintentar",
+    "save": "Guardar",
+    "search": "Buscar",
+    "submit": "Enviar",
+    "upload": "Subir",
+    "goTo": "Ir a",
+    "addOne": "Agregar {{label, lowercase, article}}",
+    "editOne": "Editar {{label, lowercase, article}}",
+    "selectOne": "Seleccionar {{label, lowercase, article}}",
+    "selectOneOrMore": "Seleccione uno o más {{label, lowercase}}",
+    "download": "Descargar"
+  },
+  "settings": {
+    "lang": "Idioma"
+  },
+  "profile": {
+    "profile": "Perfil",
+    "user_profile": "Perfil del usuario",
+    "phoneNumber": "Número de teléfono",
+    "timezone": "Zona horaria",
+    "full_name": "Nombre completo",
+    "email_address": "Email",
+    "restaurant_name": "Nombre del establecimiento",
+    "name": "{{firstName}} {{lastName}}"
+  },
+  "order": {
+    "pendingOrders": "Pedidos pendientes",
+    "viewCart": "Ver carrito",
+    "hasUnavailableItem": "Artículos no disponibles en el carrito",
+    "hasUnavailableItemDescription": "Eliminar artículos no disponibles del carrito",
+    "placeOrder": "Hacer pedido",
+    "placeOrderAndComplete": "Finalizar",
+    "placeOrderSuccess": "¡Pedido realizado con éxito!",
+    "checkoutSuccess": "¡Pago realizado con éxito!",
+    "total": "Total",
+    "subtotal": "Subtotal",
+    "actualReceipts": "Ingresar pago",
+    "insufficientPayment": "Fondos insuficientes",
+    "change": "Devolver cambio",
+    "table": "Mesa",
+    "no": "No.",
+    "paymentMethod": "Método de pago",
+    "totalAmount": "Importe total",
+    "taxIncluded": "Con IVA",
+    "taxRate": "Tipo de impuesto",
+    "pending": "Pendiente",
+    "completed": "Terminado",
+    "checkout": "Pagar ahora",
+    "cash": "Efectivo",
+    "creditCard": "Tarjeta de crédito",
+    "debitCard": "Tarjeta de débito",
+    "eWallet": "Billetera electrónica",
+    "type": "Tipo",
+    "dineIn": "Para comer aquí",
+    "takeOut": "Para llevar",
+    "delivery": "Entrega",
+    "itemQuantity_one": "{{count}} producto",
+    "itemQuantity_many": "{{count}} Productos",
+    "itemQuantity_other": "{{count}} Productos",
+    "createTime": "Tiempo de pedido",
+    "asc": "Orden ascendente",
+    "desc": "Orden descendente"
+  },
+  "reservation": {
+    "errors": {
+      "mustBeSameDay": "La fecha de inicio y fin deben ser el mismo día."
+    }
+  },
+  "diningTable": {
+    "number": "Número",
+    "capacity": "Capacidad",
+    "QRCode": "Código QR"
+  },
+  "customer": {
+    "name": "Nombre",
+    "phoneNumber": "Número de teléfono",
+    "address": "Dirección",
+    "email": "Email"
+  },
+  "item": {
+    "imageUrl": "Imagen",
+    "imageUploadTooltip": "Las imágenes deben tener al menos 100 píxeles de ancho y 100 píxeles de alto.",
+    "isAvailable": "Está disponible"
+  },
+  "home": {
+    "weeklySalesOverview": "Resumen de ventas semanales",
+    "goodMorning": "¡Buenos días!",
+    "goodAfternoon": "¡Buenas tardes!",
+    "goodEvening": "¡Buenas noches!"
+  },
+  "reporting": {
+    "revenue": "Ingresos",
+    "paidOrders": "Pedidos pagados",
+    "soldDishes": "Platos vendidos",
+    "salesVolume": "Volumen de ventas",
+    "Upsales": "Más vendidos",
+    "Overview": "Resumen",
+    "ordersStatistics": "Estadísticas de pedidos",
+    "Hourly": "Por hora",
+    "Daily": "Diario",
+    "Weekly": "Semanal",
+    "Monthly": "Mensual",
+    "Quarterly": "Trimestral",
+    "Yearly": "Anual",
+    "today": "Hoy",
+    "yesterday": "Ayer",
+    "thisWeek": "Esta semana",
+    "thisMonth": "Este mes",
+    "thisQuarter": "Este trimestre",
+    "thisYear": "Este año",
+    "last{{count}}days": "Últimos {{count}} días"
+  },
+  "all": "Todo",
+  "name": "Nombre",
+  "time": "Tiempo",
+  "createTime": "Crear tiempo",
+  "updateTime": "Tiempo de actualizacion",
+  "description": "Descripción",
+  "desc": "Descendente",
+  "quantity": "Cantidad",
+  "status": "Estado",
+  "note": "Nota",
+  "price": "Precio",
+  "currency{{value}}": "{{value, currency(USD)}}",
+  "number{{value}}": "{{value, number}}",
+  "unclassified": "Desclasificado",
+  "availablity": "Disponibilidad",
+  "placeholder": "Por favor escribe {{label, lowercase, article}} aquí",
+  "duplicated": "Duplicado",
+  "deleteConfirm": "¿Está seguro de que desea eliminar {{this}}?",
+  "pleaseWaitForUpload": "Subiendo, por favor espere.",
+  "pleaseRemoveErrorImage": "Por favor, elimine la imagen de error.",
+  "pleaseCheckStatus": "Por favor, verifique el estado",
+  "pleaseRetry": "Por favor, intenta de nuevo",
+  "error": "Error",
+  "unknown": "Desconocido",
+  "somethingWentWrong": "Algo salió mal",
+  "noResultFound": "No se encontraron resultados.",
+  "noData": "Sin datos"
+}

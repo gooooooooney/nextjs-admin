@@ -29,34 +29,18 @@ export const Icons = {
       ></path>
     </svg>
   ),
-  home: ({ className, ...props }: LucideProps) => (
-    <Home {...props} className={cn('size-4', className)} />
+  home: <Home className={cn('size-4')} />,
+  bookOpenText: <BookOpenText className={cn('size-4')} />,
+  clipboardList: <ClipboardList className={cn('size-4')} />,
+  lamp: <Lamp className={cn('size-4')} />,
+  phoneCall: <PhoneCall className={cn('size-4')} />,
+  barChartBig: <BarChartBig className={cn('size-4')} />,
+  libraryBig: <LibraryBig className={cn('size-4')} />,
+  chevronDown: (props: LucideProps) => (
+    <ChevronDown className={(cn('size-4'), props.className)} />
   ),
-  bookOpenText: ({ className, ...props }: LucideProps) => (
-    <BookOpenText {...props} className={cn('size-4', className)} />
+  chevronLeft: (props: LucideProps) => (
+    <ChevronLeft className={cn('size-4', props.className)} />
   ),
-  clipboardList: ({ className, ...props }: LucideProps) => (
-    <ClipboardList {...props} className={cn('size-4', className)} />
-  ),
-  lamp: ({ className, ...props }: LucideProps) => (
-    <Lamp {...props} className={cn('size-4', className)} />
-  ),
-  phoneCall: ({ className, ...props }: LucideProps) => (
-    <PhoneCall {...props} className={cn('size-4', className)} />
-  ),
-  barChartBig: ({ className, ...props }: LucideProps) => (
-    <BarChartBig {...props} className={cn('size-4', className)} />
-  ),
-  libraryBig: ({ className, ...props }: LucideProps) => (
-    <LibraryBig {...props} className={cn('size-4', className)} />
-  ),
-  chevronDown: ({ className, ...props }: LucideProps) => (
-    <ChevronDown {...props} className={cn('size-4', className)} />
-  ),
-  chevronLeft: ({ className, ...props }: LucideProps) => (
-    <ChevronLeft {...props} className={cn('size-4', className)} />
-  ),
-  hamburgerMenu: ({ className, ...props }: LucideProps) => (
-    <Menu {...props} className={cn('size-4', className)} />
-  ),
+  hamburgerMenu: <Menu className={cn('size-4')} />,
 };

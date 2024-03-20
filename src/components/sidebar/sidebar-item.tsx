@@ -31,7 +31,7 @@ export const SidebarItem = ({
       {collapsed && (
         <Dropdown items={item.children}>
           <Button type="button" variant="ghost" size="icon">
-            {item.icon && <item.icon />}
+            {item.icon}
           </Button>
         </Dropdown>
       )}
@@ -52,7 +52,7 @@ export const SidebarItem = ({
                 'flex w-full items-center justify-start gap-x-3.5 rounded-lg px-2.5  text-start text-sm '
               )}
             >
-              {item.icon && <item.icon className="!rotate-0" />}
+              {item.icon && <span className="!rotate-0">{item.icon}</span>}
               <span
                 className={cn('opacity-100 transition-all ', {
                   hidden: collapsed,
@@ -94,7 +94,7 @@ export const SidebarItem = ({
         )}
         href={item.path || '/'}
       >
-        {item.icon && <item.icon />}
+        {item.icon}
         <span
           className={cn('visible opacity-100 transition-all ', {
             hidden: collapsed,

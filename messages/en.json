@@ -1,0 +1,297 @@
+{
+  "signup": {
+    "label": "Sign up",
+    "description": "Signing up for Dineasy is fast and free.",
+    "fields": {
+      "restaurant": {
+        "label": "Restaurant name",
+        "placeholder": "Enter the restaurant name"
+      },
+      "address": {
+        "label": "Address",
+        "placeholder": "Enter restaurant address"
+      },
+      "first_name": {
+        "label": "First Name",
+        "placeholder": "Enter your first name"
+      },
+      "last_name": {
+        "label": "Last Name",
+        "placeholder": "Enter your last name"
+      },
+      "phone": {
+        "label": "Phone Number",
+        "placeholder": "Enter a phone number",
+        "validate": {
+          "phone_incorrect": "Phone number is incorrect!",
+          "country_code_required": "Country code is required!"
+        }
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "Enter your email"
+      },
+      "verification_code": {
+        "label": "Verification Code",
+        "placeholder": "Enter the verification code",
+        "send": "Send Code",
+        "send_again": "Resend Code",
+        "send_again_in": "Resend in {{time}}s",
+        "send_success": "Code sent successfully!",
+        "validate": {
+          "code_incorrect": "The verification code is incorrect!",
+          "code_expired": "The verification code has expired!",
+          "code_required": "Please enter the verification code!",
+          "email_required": "Email is required!"
+        }
+      },
+      "password": {
+        "label": "Password",
+        "placeholder": "Create a password",
+        "validate": {
+          "password_not_strong": "The password must contain at least one uppercase letter, one lowercase letter, one number and one special character!"
+        }
+      },
+      "confirm_password": {
+        "label": "Confirm Password",
+        "placeholder": "Reenter password",
+        "validate": {
+          "password_not_match": "Passwords do not match. Please try again."
+        }
+      }
+    },
+    "continue": "Continue",
+    "prev": "Previous",
+    "already_have_account": "Already have an account?",
+    "tips": {
+      "success": "Successful signup! Now you can sign in with your account.",
+      "failure": "Sign up error. Please check the information and try again."
+    }
+  },
+  "login": {
+    "label": "Sign in",
+    "description": "New to Dineasy?",
+    "fields": {
+      "email": {
+        "label": "Email",
+        "placeholder": "Enter your email"
+      },
+      "password": {
+        "label": "Password",
+        "placeholder": "Enter your password"
+      }
+    },
+    "tips": {
+      "failure": "Sign in failed. Check your username and password and try again."
+    }
+  },
+  "logout": {
+    "label": "Sign out"
+  },
+  "Dashboard": {
+    "menus": {
+      "home": "Home",
+      "settings": "Settings",
+      "reporting": "Reporting and Analytics",
+      "menu": "Menu",
+      "orders": "Orders",
+      "orderManagement": "Historic Orders",
+      "misc": "Misc",
+      "reservations": "Reservations",
+      "reservationHistory": "Historic Reservations"
+    },
+    "terminologies": {
+      "category": "Category",
+      "categories": "Categories",
+      "item": "Item",
+      "items": "Items",
+      "combo": "Combo",
+      "combos": "Combos",
+      "order": "Order",
+      "orders": "Orders",
+      "diningTable": "Table",
+      "diningTables": "Tables",
+      "customer": "Customer",
+      "customers": "Customers",
+      "reservation": "Reservation",
+      "reservations": "Reservations",
+      "modifier": "Modifier",
+      "modifiers": "Modifiers",
+      "modifierOption": "Modifier Option",
+      "modifierOptions": "Modifier Options",
+      "modifierGroup": "Modifier Group",
+      "modifierGroups": "Modifier Groups",
+      "priceAdjustment": "Price Adjustment"
+    }
+  },
+  "feedback": {
+    "pageNotFound": "Page Not Found",
+    "backToHome": "Back to Home",
+    "badRequest": "Bad Request",
+    "serverError": "Server Error",
+    "operationSucceeded": "Operation completed successfully.",
+    "operationFailed": "Error completing the operation. Please try again.",
+    "{{label}}AlreadyExists": "{{label}} already exists.",
+    "imageTooLarge": "The uploaded image is too large!",
+    "imagePixelsTooLarge": "The image is too large. Please use a smaller one.",
+    "imagePixelsTooSmall": "Image is too small. Please use a larger one.",
+    "noMore": "No more",
+    "newVersionAvailable": "New version available! Update now for the latest features and improvements.",
+    "new{{version}}Available": "New version {{version}} available! Update now for the latest features and improvements.",
+    "updateNow": "Update now"
+  },
+  "actions": {
+    "actions": "Actions",
+    "add": "Add",
+    "back": "Back",
+    "create": "Create",
+    "edit": "Edit",
+    "delete": "Delete",
+    "update": "Update",
+    "clear": "Clear",
+    "print": "Print",
+    "continue": "Continue",
+    "next": "Next",
+    "prev": "Previous",
+    "refresh": "Refresh",
+    "cancel": "Cancel",
+    "close": "Close",
+    "retry": "Retry",
+    "save": "Save",
+    "search": "Search",
+    "submit": "Submit",
+    "upload": "Upload",
+    "goTo": "Go to",
+    "addOne": "Add {{label, lowercase, article}}",
+    "editOne": "Edit {{label, lowercase, article}}",
+    "selectOne": "Select {{label, lowercase, article}}",
+    "selectOneOrMore": "Select one or more {{label, lowercase}}",
+    "download": "Download"
+  },
+  "settings": {
+    "lang": "Language"
+  },
+  "profile": {
+    "profile": "Profile",
+    "phoneNumber": "Phone Number",
+    "timezone": "Timezone",
+    "user_profile": "User Profile",
+    "full_name": "Full Name",
+    "email_address": "Email Address",
+    "restaurant_name": "Restaurant Name",
+    "name": "{{firstName}} {{lastName}}"
+  },
+  "order": {
+    "pendingOrders": "Pending Orders",
+    "viewCart": "View Cart",
+    "hasUnavailableItem": "Unavailable items in the cart",
+    "hasUnavailableItemDescription": "Remove the unavailable items in the cart",
+    "placeOrder": "Place Order",
+    "placeOrderAndComplete": "Complete",
+    "placeOrderSuccess": "Order successfully placed!",
+    "checkoutSuccess": "Order successfully checked out!",
+    "total": "Total",
+    "subtotal": "Subtotal",
+    "actualReceipts": "Enter Payment",
+    "change": "Return Change",
+    "insufficientPayment": "Insufficient funds.",
+    "table": "Table",
+    "no": "No.",
+    "itemQuantity_one": "{{count}} item",
+    "itemQuantity_other": "{{count}} items",
+    "paymentMethod": "Payment Method",
+    "totalAmount": "Total Amount",
+    "taxIncluded": "Include IVA",
+    "taxRate": "Tax Rate",
+    "pending": "Pending",
+    "completed": "Completed",
+    "checkout": "Checkout Now",
+    "cash": "Cash",
+    "creditCard": "Credit Card",
+    "debitCard": "Debit Card",
+    "eWallet": "E-Wallet",
+    "type": "Type",
+    "dineIn": "Dine-In",
+    "takeOut": "TakeOut",
+    "delivery": "Delivery",
+    "createTime": "Order Time",
+    "asc": "Ascending Order",
+    "desc": "Descending Order"
+  },
+  "reservation": {
+    "errors": {
+      "mustBeSameDay": "Must be the same day"
+    }
+  },
+  "diningTable": {
+    "number": "Number",
+    "capacity": "Capacity",
+    "QRCode": "QR Code"
+  },
+  "customer": {
+    "name": "Name",
+    "phoneNumber": "Phone",
+    "address": "Address",
+    "email": "Email"
+  },
+  "item": {
+    "imageUrl": "Image",
+    "imageUploadTooltip": "Images must be at least 100 pixels wide and 100 pixels tall.",
+    "isAvailable": "Is Available"
+  },
+  "home": {
+    "weeklySalesOverview": "Weekly Sales Overview",
+    "goodMorning": "Good Morning!",
+    "goodAfternoon": "Good Afternoon!",
+    "goodEvening": "Good Evening!"
+  },
+  "reporting": {
+    "revenue": "Revenue",
+    "paidOrders": "Paid Orders",
+    "soldDishes": "Sold Dishes",
+    "salesVolume": "Sales Volume",
+    "Upsales": "Upsales",
+    "Overview": "Overview",
+    "ordersStatistics": "Orders Statistics",
+    "Hourly": "Hourly",
+    "Daily": "Daily",
+    "Weekly": "Weekly",
+    "Monthly": "Monthly",
+    "Quarterly": "Quarterly",
+    "Yearly": "Yearly",
+    "today": "Today",
+    "yesterday": "Yesterday",
+    "thisWeek": "Current Week",
+    "thisMonth": "Current Month",
+    "thisQuarter": "Current Quarter",
+    "thisYear": "Current Year",
+    "last{{count}}days": "Last {{count}} Days"
+  },
+  "all": "All",
+  "name": "Name",
+  "time": "Time",
+  "createTime": "Create Time",
+  "updateTime": "Update Time",
+  "description": "Description",
+  "desc": "Desc",
+  "quantity": "Quantity",
+  "status": "Status",
+  "note": "Note",
+  "price": "Price",
+  "currency{{value}}": "{{value, currency(USD)}}",
+  "number{{value}}": "{{value, number}}",
+  "unclassified": "Unclassified",
+  "availablity": "Availability",
+  "placeholder": "Please type {{label, lowercase, article}} here",
+  "duplicated": "Duplicated",
+  "deleteConfirm": "Are you sure you want to delete {{this}}?",
+  "pleaseWaitForUpload": "Uploading, please wait.",
+  "pleaseRemoveErrorImage": "Please remove the error image",
+  "pleaseCheckStatus": "Please check the status",
+  "pleaseRetry": "Please retry",
+  "error": "Error",
+  "unknown": "Unknown",
+  "somethingWentWrong": "Something went wrong",
+  "noResultFound": "No result found",
+  "noData": "No Data"
+}

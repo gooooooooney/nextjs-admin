@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-import { LucideProps } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
@@ -14,96 +13,15 @@ import { cn } from '@/lib/utils';
 export type MenuItem = {
   label: string;
   path?: string;
-  icon?: (props: LucideProps) => React.JSX.Element;
+  icon?: React.JSX.Element;
   children?: MenuItem[];
 };
 
 export type SidebarProps = {
-  items: MenuItem[];
+  routes: MenuItem[];
 };
 
-export const routes: MenuItem[] = [
-  {
-    path: '/',
-    label: 'Dashboard',
-    icon: Icons.home,
-  },
-  {
-    path: '/menu',
-    label: 'menu',
-    icon: Icons.bookOpenText,
-    children: [
-      {
-        path: '/menu/items',
-        label: 'items',
-      },
-      {
-        path: '/menu/combos',
-        label: 'combos',
-      },
-      {
-        path: '/menu/categories',
-        label: 'categories',
-      },
-    ],
-  },
-  {
-    path: '/orders',
-    label: 'orders',
-    icon: Icons.clipboardList,
-    children: [
-      {
-        path: '/orders/management',
-        label: 'orderManagement',
-      },
-    ],
-  },
-  {
-    path: '/dining-tables/management',
-    label: 'diningTables',
-    icon: Icons.lamp,
-  },
-  {
-    path: '/reservations',
-    label: 'reservations',
-    icon: Icons.phoneCall,
-    children: [
-      {
-        path: '/reservations/management',
-        label: 'reservationHistory',
-        children: [
-          {
-            path: '/reservations/management/active',
-            label: 'activeReservations',
-            icon: Icons.barChartBig,
-          },
-          {
-            path: '/reservations/management/past',
-            label: 'pastReservations',
-          },
-        ],
-      },
-    ],
-  },
-  {
-    path: '/reporting',
-    label: 'reporting',
-    icon: Icons.barChartBig,
-  },
-  {
-    path: '/misc',
-    label: 'misc',
-    icon: Icons.libraryBig,
-    children: [
-      {
-        path: '/customers',
-        label: 'customers',
-      },
-    ],
-  },
-];
-
-export const Sidebar = ({ items }: SidebarProps) => {
+export const Sidebar = ({ routes }: SidebarProps) => {
   const pathname = usePathname();
   const [collapsed, setCollapsed] = React.useState(false);
   return (
@@ -125,7 +43,7 @@ export const Sidebar = ({ items }: SidebarProps) => {
           <SidebarHeader collapsed={collapsed} />
         </Link>
       </div>
-      <SidebarMenu {...{ pathname, items, collapsed, setCollapsed }} />
+      <SidebarMenu {...{ pathname, routes, collapsed, setCollapsed }} />
       <Button
         variant="ghost"
         size="icon"

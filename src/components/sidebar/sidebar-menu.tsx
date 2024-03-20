@@ -4,14 +4,14 @@ import { MenuItem } from '.';
 import { SidebarItem } from './sidebar-item';
 
 type SidebarMenuProps = {
-  items: MenuItem[];
+  routes: MenuItem[];
   collapsed: boolean;
   pathname: string;
 };
 
 export const SidebarMenu = ({
   pathname,
-  items,
+  routes,
   collapsed,
 }: SidebarMenuProps) => {
   return (
@@ -20,7 +20,7 @@ export const SidebarMenu = ({
       data-hs-accordion-always-open
     >
       <ul className="space-y-1.5">
-        {items.map((item) => (
+        {routes.map((item) => (
           <SidebarItem
             collapsed={collapsed}
             pathname={pathname}
