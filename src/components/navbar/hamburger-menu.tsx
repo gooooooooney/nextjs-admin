@@ -13,7 +13,7 @@ export const HamburgerMenu = ({ routes }: { routes: MenuItem[] }) => {
   return matches ? (
     <MobileSidebar routes={routes}>
       <Button variant="ghost" size="icon">
-        <Icons.hamburgerMenu className="size-4" />
+        {Icons.hamburgerMenu}
       </Button>
     </MobileSidebar>
   ) : null;
