@@ -1,12 +1,19 @@
 import React from 'react';
 
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { cn } from '@/lib/utils';
 
-export const Logo = () => {
+export const Logo = ({
+  className,
+  fallback,
+}: {
+  className?: string;
+  fallback?: string;
+}) => {
   return (
-    <Avatar className="size-8">
+    <Avatar className={cn('size-8', className)}>
       <AvatarImage src="/logo.webp" alt="logo" />
-      <AvatarFallback>lg</AvatarFallback>
+      <AvatarFallback>{fallback}</AvatarFallback>
     </Avatar>
   );
 };

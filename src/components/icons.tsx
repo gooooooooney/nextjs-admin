@@ -12,6 +12,7 @@ import {
   Menu,
   Moon,
   PhoneCall,
+  RotateCw,
   Sun,
 } from 'lucide-react';
 
@@ -41,6 +42,9 @@ export const Icons = {
   ),
   chevronLeft: (props: LucideProps) => (
     <ChevronLeft className={cn('size-4', props.className)} />
+  ),
+  rotate: (props: LucideProps) => (
+    <RotateCw className={cn('size-4', props.className)} />
   ),
   hamburgerMenu: <Menu className={cn('size-4')} />,
 };

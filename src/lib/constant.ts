@@ -13,7 +13,15 @@ export const siteConfig = {
     'Prisma',
   ],
   url: env.NEXT_PUBLIC_SITE_URL || 'https://example.com',
-  googleSiteVerificationId: env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION_ID || '',
 };
 
 export const locales = ['en', 'zh', 'es'] as const;
+
+export const enum URL_INFO {
+  FROM = 'from',
+  PATHNAME = 'x-pathname',
+}
+
+export const enum COOKIES {
+  TOKEN = '0',
+}

@@ -1,10 +1,14 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React from 'react';
+import { cookies, headers } from 'next/headers';
+import { redirect } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 
 import { Footer } from '@/components/footer';
 import { Icons } from '@/components/icons';
 import { Navbar } from '@/components/navbar/navbar';
 import { MenuItem, Sidebar } from '@/components/sidebar';
+import { COOKIES, URL_INFO } from '@/lib/constant';
 
 type AdminLayoutProps = React.PropsWithChildren<{
   params: {
@@ -12,9 +16,15 @@ type AdminLayoutProps = React.PropsWithChildren<{
   };
 }>;
 
-const AdminLayout = ({ children }: AdminLayoutProps) => {
+const AdminLayout = ({ children, params: { locale } }: AdminLayoutProps) => {
   const t = useTranslations('Dashboard');
-
+  // const cookieStore = cookies();
+  // const headersList = headers();
+  // const token = cookieStore.get(COOKIES.TOKEN);
+  // const from = headersList.get(URL_INFO.PATHNAME);
+  // if (!token) {
+  //   return redirect(`/${locale}/login?${URL_INFO.FROM}=${from}`);
+  // }
   const routes: MenuItem[] = [
     {
       path: '/',

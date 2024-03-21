@@ -5,7 +5,7 @@ import type { Metadata } from 'next';
 import NextTopLoader from 'nextjs-toploader';
 
 import { ThemeProvider } from '@/components/theme-provider';
-import { Toaster } from '@/components/ui/toaster';
+import { Toaster } from '@/components/ui/sonner';
 import { siteConfig } from '@/lib/constant';
 import { fonts } from '@/lib/fonts';
 import { cn } from '@/lib/utils';
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     apple: '/favicon/apple-touch-icon.png',
   },
   verification: {
-    google: siteConfig.googleSiteVerificationId,
+    // google: siteConfig.googleSiteVerificationId,
   },
   openGraph: {
     url: siteConfig.url,

@@ -1,4 +1,9 @@
-const createNextIntlPlugin = require('next-intl/plugin');
+import path from 'path';
+import createJiti from 'jiti';
+import createNextIntlPlugin from 'next-intl/plugin';
+
+const jiti = createJiti(new URL(import.meta.url).pathname);
+jiti(path.resolve('./src/env.mjs'));
 
 const withNextIntl = createNextIntlPlugin();
 
@@ -22,4 +27,4 @@ const nextConfig = {
   },
 };
 
-module.exports = withNextIntl(nextConfig);
+export default withNextIntl(nextConfig);
