@@ -18,13 +18,13 @@ type AdminLayoutProps = React.PropsWithChildren<{
 
 const AdminLayout = ({ children, params: { locale } }: AdminLayoutProps) => {
   const t = useTranslations('Dashboard');
-  // const cookieStore = cookies();
-  // const headersList = headers();
-  // const token = cookieStore.get(COOKIES.TOKEN);
-  // const from = headersList.get(URL_INFO.PATHNAME);
-  // if (!token) {
-  //   return redirect(`/${locale}/login?${URL_INFO.FROM}=${from}`);
-  // }
+  const cookieStore = cookies();
+  const headersList = headers();
+  const token = cookieStore.get(COOKIES.TOKEN);
+  const from = headersList.get(URL_INFO.PATHNAME);
+  if (token === undefined) {
+    return redirect(`/${locale}/login?${URL_INFO.FROM}=${from}`);
+  }
   const routes: MenuItem[] = [
     {
       path: '/',
