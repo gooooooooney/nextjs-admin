@@ -1,14 +1,7 @@
 <a href="https://next-starter-skolaczk.vercel.app/">
 <img src="https://github.com/Skolaczk/next-starter/assets/76774237/44b552ff-43aa-441f-b1d0-de9bdfc2a73f" alt="thubnail">
 </a>
-<p align="center">
-  <a href="#-features"><strong>Features</strong></a> ·
-  <a href="#-deployment"><strong>Deployment</strong></a> ·
-  <a href="#-getting-started"><strong>Getting started</strong></a> ·
-  <a href="#%EF%B8%8F-scripts-overview"><strong>Scripts overview</strong></a> ·
-  <a href="#-contribution"><strong>Contribution</strong></a> ·
-  <a href="#%EF%B8%8F-support"><strong>Support</strong></a>
-</p>
+![alt text](image.png)
 
 ## 🎉 Features
 - 🚀 Next.js 14 (App router)
@@ -16,8 +9,6 @@
 - 📘 Typescript
 - 🎨 TailwindCSS - Class sorting, merging and linting
 - 🛠️ Shadcn/ui - Customizable UI components
-- 🔒 Next-auth - Easy authentication library for Next.js (GitHub provider)
-- 🛡️ Prisma - ORM for node.js
 - 📋 React-hook-form - Manage your forms easy and efficient 
 - 🔍 Zod - Schema validation library
 - 🧪 Jest & React Testing Library - Configured for unit testing
@@ -121,16 +112,3 @@ The following scripts are available in the `package.json`:
 - `postbuild`: Generate sitemap
 - `prepare`: Install Husky for managing Git hooks
 
-## 🤝 Contribution
-To contribute, please follow these steps:
-1. Fork the repository.
-2. Create a new branch.
-3. Make your changes, and commit them.
-4. Push your changes to the forked repository.
-5. Create a pull request.
-
-## ❤️ Support
-
-If you liked the project, I will appreciate if you leave a star. 🌟😊
-
-Made by <a href="https://michalskolak.netlify.app/">Michał Skolak</a> 

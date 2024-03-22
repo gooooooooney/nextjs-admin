@@ -1,9 +1,19 @@
+import { cookies } from 'next/headers';
 import { compile } from 'path-to-regexp';
 import qs from 'qs';
 
 import { isPlainObject } from './typeGuard';
 
 import { env } from '@/env.mjs';
+
+function convertCookieArrayToObjectArray(cookieArray: string[]) {
+  return cookieArray.map((cookieStr) => {
+    // eslint-disable-next-line prefer-const
+    let [name, value] = cookieStr.split(/=;/)[0].split('='); // 先按照=;分割，再按=分割以获取name和value
+    value = value || ''; // 如果value是undefined，则赋值为空字符串
+    return { name, value };
+  });
+}
 
 type RequestOptions = Omit<RequestInit, 'body'> & {
   body?: RequestInit['body'] | PlainObject;
@@ -12,7 +22,7 @@ type RequestOptions = Omit<RequestInit, 'body'> & {
 
 export const request = <T>(
   url: string,
-  { body, isPath, ...options }: RequestOptions
+  { body, isPath, ...options }: RequestOptions = {}
 ) => {
   const defaultOptions: RequestInit = {
     credentials: 'include',
@@ -26,6 +36,7 @@ export const request = <T>(
 
   let u = url;
   switch (newOptions.method?.toUpperCase()) {
+    case undefined:
     case 'GET':
       if (isPath) {
         u = compile(url, { encode: encodeURIComponent })(body as PlainObject);
@@ -56,6 +67,17 @@ export const request = <T>(
       }
       throw new Error(`${res.status} ${res.statusText}`);
     }
+    convertCookieArrayToObjectArray(res.headers.getSetCookie()).forEach(
+      (cookie) => {
+        cookies().set({
+          name: cookie.name,
+          value: cookie.value,
+          path: '/',
+          httpOnly: true,
+          secure: true,
+        });
+      }
+    );
     let data: T;
     try {
       data = (await res.json()) as T;

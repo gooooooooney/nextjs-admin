@@ -1,5 +1,4 @@
 'use server';
-
 import { request } from '@/lib/fetch';
 import { action } from '@/lib/safe-action';
 import { loginSchema } from '@/schema/zod/login';

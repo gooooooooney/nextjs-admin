@@ -24,4 +24,5 @@ export const enum URL_INFO {
 
 export const enum COOKIES {
   TOKEN = '0',
+  JWT = 't',
 }
