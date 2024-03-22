@@ -62,7 +62,6 @@ export const request = <T>(
     } catch (error) {
       data = {} as T;
     }
-    console.log(data, 'data');
     return {
       code: res.status,
       data,

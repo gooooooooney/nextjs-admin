@@ -31,8 +31,6 @@ export const LoginForm = ({ locale }: { locale: string }) => {
       if (data?.message) {
         toast.error(data.message);
       } else {
-        console.log(searchParam.get(URL_INFO.FROM));
-
         router.replace(searchParam.get(URL_INFO.FROM) || `/${locale}/admin`);
       }
     },
